@@ -12,6 +12,7 @@ import {
   ScrollView,
   View,
   Text,
+  Platform,
 } from 'react-native';
 import NetInfo from "@react-native-community/netinfo";
 
@@ -146,7 +147,8 @@ const App = () => {
 
 const styles = StyleSheet.create({
   conatainer : { 
-    flex: 1
+    flex: 1,
+    
   },
   row: {
     flexDirection: 'row',
@@ -155,7 +157,8 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: 25,
     fontWeight: 'bold',
-    textAlign:'center'
+    textAlign:'center',
+    marginTop: Platform.OS === "ios" ? 10 : 0 
   },
   itemContainer: {
     padding: 10
